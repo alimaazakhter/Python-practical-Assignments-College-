@@ -69,12 +69,13 @@ print("Even no: ", even)
 #list using range
 
 str1 = "Hello"
-vowels= list(filter(lambda char=char in 'aeiouAEIOU', str1))
+vowels= list(filter(lambda char:char in 'aeiouAEIOU', str1))
 print(f"Vowel in {str1} are {vowels}")
 
 
 
 
     
+
 
 
