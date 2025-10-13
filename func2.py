@@ -66,8 +66,15 @@ even = tuple(filter(lambda n:n%2==0, list1))
 print("Even no: ", even)
 #product = lambda num1, num2: num1
 
+#list using range
+
+str1 = "Hello"
+vowels= list(filter(lambda char=char in 'aeiouAEIOU', str1))
+print(f"Vowel in {str1} are {vowels}")
+
 
 
 
     
+
 
