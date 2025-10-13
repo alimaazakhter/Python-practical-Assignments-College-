@@ -51,10 +51,23 @@ swap= lambda num1,num2: (num2,num1)
 print("Before swapping: ", num1, num2)
 print("After swapping: ", swap(num1, num2))
 
+#syntax of filter
 
+list1=[]
+n = int(input("Till how many numbers: "))
+for n in range(1, n+1):
+    list1.append(n)
+print(list1)
+
+even = filter(lambda n:n%2==0, list1)
+print("Even no: ", list(even))
+
+even = tuple(filter(lambda n:n%2==0, list1))
+print("Even no: ", even)
 #product = lambda num1, num2: num1
 
 
 
 
     
+
