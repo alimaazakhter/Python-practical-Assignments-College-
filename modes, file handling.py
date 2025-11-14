@@ -67,3 +67,75 @@ f1.close()
 #print(f2.readlines())
 
 #f2.close()
+
+#append - write if file not exits and append if file exits
+list1=[]
+fnm = input("Enter file name :")
+with open(fnm, 'a') as f1:
+    lines = int(input("How many lines to append : "))
+    for l in range(lines):
+        data = input("Enter content to append : ")
+        list1.append(data+"\n")
+    f1.writelines(list1)
+    print("Append sucessfully")
+
+'''
+'''
+#w+ = write and read
+
+file=input("Enter file name: ")
+
+with open(file, "w+") as fobj:
+    lines=int(input("How many lines to write: "))
+
+    for l in range(lines):
+        info=input("Enter content to write: ")
+        fobj.write(info+"\n")
+    print("Written successfully")
+    print("======================================")
+
+    #tell() - provides current cursor position.
+    print(fobj.tell())
+
+    #seek() - moves the cusor pointer to specific position
+    #0 - beginning
+    fobj.seek(0)
+    print("Current position: ", fobj.tell())
+    print("File content :: ")
+    print(fobj.read())
+'''
+'''
+#a+ = append and read
+
+file=input("Enter file name: ")
+
+with open(file,"a+") as fobj:
+    lines = int(input("How many lines to append: "))
+
+    for l in range(lines):
+        info= input("Enter content to write: ")
+        fobj.write(info+"\n")
+
+    print("Append successfully")
+    print("========================================")
+    fobj.seek(0)
+    print("Current position: ", fobj.tell())
+    print("File content :: ")
+    print(fobj.read())
+    
+'''
+
+#r+ = read and write both the content
+
+file = input("Enter file name: ")
+try:
+
+    with open(file, "r+") as fobj:
+        print("File content:: ")
+        print(fobj.read())
+        print("======================================")
+        lines=int(input("How many lines to write : "))
+
+        for l in range(lines):
+            info=input("Enter content to write: ")
+            fobj.write(info+"\n")
